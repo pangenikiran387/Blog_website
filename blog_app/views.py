@@ -7,11 +7,15 @@ def get_all_post(request):
         'posts':posts
     })
 
+
+def home(request):
+    return render(request, 'blog-app/home.html')
+
+
        
 
 
 
 
 
-# def blog_posts(request):
-#     return render (request,'blog-app/blog.html')
+
