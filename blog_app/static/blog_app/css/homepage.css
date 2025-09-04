@@ -342,3 +342,14 @@ body{
     column-gap: 2rem;
     row-gap: 2rem;
 }
+.all-postheading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.all-postheading a{
+    text-decoration: none;
+    color: var(--text-color);
+
+}
