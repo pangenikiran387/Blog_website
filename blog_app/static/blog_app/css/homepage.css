@@ -314,14 +314,15 @@ body{
 }
 .btn-post .b3{
     border-radius: 0.3rem;
-    color: #6941C6;
+    /* color: #6941C6; */
     font-size: 14px;
     border: none;
 }
 .btn-post .b4{
     border-radius: 0.3rem;
-    color: #363F72;
+    /* color: #363F72; */
     font-size: 14px;
+    color: #6941C6;
     /* margin-top: 20px; */
     border: none;
    
