@@ -1,204 +1,221 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'blog_app/css/homepage.css' %}" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <!-- ========== HEADER ========== -->
-        <header class="main-header">
-            <div class="header-headline">
-                <p>Our blog</p>
-                <h3>Stories and interviews</h3>
+      <!-- ========== HEADER ========== -->
+      <header class="main-header">
+        <div class="header-headline">
+          <p>Our blog</p>
+          <h3>Stories and interviews</h3>
+        </div>
+        <div class="header-supporting-text">
+          <p>
+            Subscribe to learn about new product features, the latest in
+            technology, <br />solutions, and updates.
+          </p>
+        </div>
+        <div class="subscribe-details">
+          <input type="text" placeholder="Enter your email" />
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+        <div class="paragraph-details">
+          <p>We care about your data in our <u>privacy policy</u></p>
+        </div>
+      </header>
+
+      <!-- ========== RECENT BLOG POSTS ========== -->
+      <section class="recent-post">
+        <h1>Recent Blog Post</h1>
+        <div class="post">
+          <div class="top-recent-post">
+            <div class="image-container">
+              <img src="{% static 'blog_app/images/image.jpg' %}" alt="" />
             </div>
-            <div class="header-supporting-text">
-                <p>
-                    Subscribe to learn about new product features, the latest in
-                    technology, <br />solutions, and updates.
-                </p>
+            <div class="text">
+              <p>Olivia Rhye • 20 Jan 2022</p>
             </div>
-            <div class="subscribe-details">
-                <input type="text" placeholder="Enter your email" />
-                <button class="subscribe-btn">Subscribe</button>
+            <div class="paragraph-text">
+              <h3>UX review presentations</h3>
             </div>
-            <div class="paragraph-details">
-                <p>We care about your data in our <u>privacy policy</u></p>
+            <div class="content_text">
+              <p>
+                How do you create compelling presentations that wow your
+                colleagues and impress your managers?
+              </p>
             </div>
-        </header>
-
-        <!-- ========== RECENT BLOG POSTS ========== -->
-        <section class="recent-post">
-            <h1>Recent Blog Post</h1>
-            <div class="post">
-                <div class="top-recent-post">
-                    <div class="image-container">
-                        <img src="{% static 'blog_app/images/image.jpg' %}" alt="" />
-                    </div>
-                    <div class="text">
-                        <p>Olivia Rhye • 20 Jan 2022</p>
-                    </div>
-                    <div class="paragraph-text">
-                        <h3>UX review presentations</h3>
-                    </div>
-                    <div class="content_text">
-                        <p>
-                            How do you create compelling presentations that wow your
-                            colleagues and impress your managers?
-                        </p>
-                    </div>
-                    <div class="btn-container">
-                        <button class="btn1">Design</button>
-                        <button class="btn2">Research</button>
-                        <button class="btn3">Presentation</button>
-                    </div>
-                </div>
-
-                <!-- Other Recent Posts -->
-                <div class="other-recent-post">
-                    <div class="first-recent-post">
-                        <div class="second-image-container">
-                            <img src="{% static 'blog_app/images/second-image.jpg' %}" alt="second image" />
-                        </div>
-                        <div class="recent-post">
-                            <div class="first-recent-post__content">
-                                <p>Phonix Baker • 19 Jan 2022</p>
-                            </div>
-                            <div class="second-recent-post__content">
-                                <h2>Migrating to Linear 101</h2>
-                            </div>
-                            <div class="second_post_context">
-                                <p>
-                                    Linear helps streamline software projects, sprints, tasks,
-                                    and bug tracking. Here’s how to get...
-                                </p>
-                            </div>
-                            <div class="btn-box">
-                                <button class="bt1">Design</button>
-                                <button class="bt2">Research</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="first-recent-post">
-                        <div class="third-image-container">
-                            <img src="{% static 'blog_app/images/post_img.jpg' %}" alt="third image" />
-                        </div>
-                        <div class="recent-post">
-                            <div class="first-recent-post__content">
-                                <p>Lana Steiner • 18 Jan 2022</p>
-                            </div>
-                            <div class="second-recent-post-content">
-                                <h2>Building your API Stack</h2>
-                            </div>
-                            <div class="second_post_context">
-                                <p>
-                                    The rise of RESTful APIs has been met by a rise in tools for
-                                    creating, testing, and manag...
-                                </p>
-                            </div>
-                            <div class="btn-box2">
-                                <button class="bt3">Design</button>
-                                <button class="bt4">Research</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="btn-container">
+              <button class="btn1">Design</button>
+              <button class="btn2">Research</button>
+              <button class="btn3">Presentation</button>
             </div>
-        </section>
+          </div>
 
-
-
-
-        <!-- ========== all BLOG POSTS ========== -->
-        <section class="all-post">
-            <h1 style="margin-top: 60px; color: #101828; font-size: 24px; font-weight: 600;">
-                All Blog Posts
-            </h1>
-
-            <div class="posts">
-                <div class="single-post">
-                    <div class="image-post">
-                        <img src="{% static 'blog_app/images/all-img1.jpg' %}" alt="blog image">
-
-                    </div>
-                    <div class="description">
-                         <h4>Alec Whitten • 17 Jan 2022</h4>
-                         <h2>Bill Walsh leadership lessons</h2>
-                         <p3>Like to know the secrets of transforming a 2-14<br>
-                             team into a 3x Super Bowl winning Dynasty?</p3>
-
-                    </div>
-                    <div class="btn-post">
-                        <button class="b3">leadership</button>
-                        <button class="b4">Management</button>
-                    </div>
+          <!-- Other Recent Posts -->
+          <div class="other-recent-post">
+            <div class="first-recent-post">
+              <div class="second-image-container">
+                <img
+                  src="{% static 'blog_app/images/second-image.jpg' %}"
+                  alt="second image"
+                />
+              </div>
+              <div class="recent-post">
+                <div class="first-recent-post__content">
+                  <p>Phonix Baker • 19 Jan 2022</p>
                 </div>
-                <div class="single-post">
-                    <div class="image-post">
-                        <img src="{% static 'blog_app/images/post-img2.jpg' %}" alt="blog image">
-
-                    </div>
-                    <div class="description">
-                         <h4>Alec Whitten • 17 Jan 2022</h4>
-                         <h2>Bill Walsh leadership lessons</h2>
-                         <p3>Like to know the secrets of transforming a 2-14<br>
-                             team into a 3x Super Bowl winning Dynasty?</p3>
-
-                    </div>
-                    <div class="btn-post">
-                        <button class="b3">leadership</button>
-                        <button class="b4">Management</button>
-                    </div>
+                <div class="second-recent-post__content">
+                  <h2>Migrating to Linear 101</h2>
                 </div>
-                <div class="single-post">
-                    <div class="image-post">
-                        <img src="{% static 'blog_app/images/post-img3.jpg' %}" alt="blog image">
-
-                    </div>
-                    <div class="description">
-                         <h4>Alec Whitten • 17 Jan 2022</h4>
-                         <h2>Bill Walsh leadership lessons</h2>
-                         <p3>Like to know the secrets of transforming a 2-14<br>
-                             team into a 3x Super Bowl winning Dynasty?</p3>
-
-                    </div>
-                    <div class="btn-post">
-                        <button class="b3">leadership</button>
-                        <button class="b4">Management</button>
-                    </div>
+                <div class="second_post_context">
+                  <p>
+                    Linear helps streamline software projects, sprints, tasks,
+                    and bug tracking. Here’s how to get...
+                  </p>
                 </div>
-                <div class="single-post">
-                    <div class="image-post">
-                        <img src="{% static 'blog_app/images/post-img4.jpg' %}" alt="blog image">
-
-                    </div>
-                    <div class="description">
-                         <h4>Alec Whitten • 17 Jan 2022</h4>
-                         <h2>Bill Walsh leadership lessons</h2>
-                         <p3>Like to know the secrets of transforming a 2-14<br>
-                             team into a 3x Super Bowl winning Dynasty?</p3>
-
-                    </div>
-                    <div class="btn-post">
-                        <button class="b3">leadership</button>
-                        <button class="b4">Management</button>
-                    </div>
+                <div class="btn-box">
+                  <button class="bt1">Design</button>
+                  <button class="bt2">Research</button>
                 </div>
+              </div>
+            </div>
 
-                
-                   
+            <div class="first-recent-post">
+              <div class="third-image-container">
+                <img
+                  src="{% static 'blog_app/images/post_img.jpg' %}"
+                  alt="third image"
+                />
+              </div>
+              <div class="recent-post">
+                <div class="first-recent-post__content">
+                  <p>Lana Steiner • 18 Jan 2022</p>
                 </div>
+                <div class="second-recent-post-content">
+                  <h2>Building your API Stack</h2>
+                </div>
+                <div class="second_post_context">
+                  <p>
+                    The rise of RESTful APIs has been met by a rise in tools for
+                    creating, testing, and manag...
+                  </p>
+                </div>
+                <div class="btn-box2">
+                  <button class="bt3">Design</button>
+                  <button class="bt4">Research</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ========== all BLOG POSTS ========== -->
+      <section class="all-post">
+        <div class="all-post__heading">
+          <h1
+            style="
+              margin-top: 60px;
+              color: #101828;
+              font-size: 24px;
+              font-weight: 600;
+            "
+          >
+            All Blog Posts
+          </h1>
+          <a href="{% url 'blog' %}">See All</a>
+        </div>
 
-
-        </section>
+        <div class="posts">
+          <div class="single-post">
+            <div class="image-post">
+              <img
+                src="{% static 'blog_app/images/all-img1.jpg' %}"
+                alt="blog image"
+              />
+            </div>
+            <div class="description">
+              <h4>Alec Whitten • 17 Jan 2022</h4>
+              <h2>Bill Walsh leadership lessons</h2>
+              <p3
+                >Like to know the secrets of transforming a 2-14<br />
+                team into a 3x Super Bowl winning Dynasty?</p3
+              >
+            </div>
+            <div class="btn-post">
+              <button class="b3">leadership</button>
+              <button class="b4">Management</button>
+            </div>
+          </div>
+          <div class="single-post">
+            <div class="image-post">
+              <img
+                src="{% static 'blog_app/images/post-img2.jpg' %}"
+                alt="blog image"
+              />
+            </div>
+            <div class="description">
+              <h4>Alec Whitten • 17 Jan 2022</h4>
+              <h2>Bill Walsh leadership lessons</h2>
+              <p3
+                >Like to know the secrets of transforming a 2-14<br />
+                team into a 3x Super Bowl winning Dynasty?</p3
+              >
+            </div>
+            <div class="btn-post">
+              <button class="b3">leadership</button>
+              <button class="b4">Management</button>
+            </div>
+          </div>
+          <div class="single-post">
+            <div class="image-post">
+              <img
+                src="{% static 'blog_app/images/post-img3.jpg' %}"
+                alt="blog image"
+              />
+            </div>
+            <div class="description">
+              <h4>Alec Whitten • 17 Jan 2022</h4>
+              <h2>Bill Walsh leadership lessons</h2>
+              <p3
+                >Like to know the secrets of transforming a 2-14<br />
+                team into a 3x Super Bowl winning Dynasty?</p3
+              >
+            </div>
+            <div class="btn-post">
+              <button class="b3">leadership</button>
+              <button class="b4">Management</button>
+            </div>
+          </div>
+          <div class="single-post">
+            <div class="image-post">
+              <img
+                src="{% static 'blog_app/images/post-img4.jpg' %}"
+                alt="blog image"
+              />
+            </div>
+            <div class="description">
+              <h4>Alec Whitten • 17 Jan 2022</h4>
+              <h2>Bill Walsh leadership lessons</h2>
+              <p3
+                >Like to know the secrets of transforming a 2-14<br />
+                team into a 3x Super Bowl winning Dynasty?</p3
+              >
+            </div>
+            <div class="btn-post">
+              <button class="b3">leadership</button>
+              <button class="b4">Management</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>
